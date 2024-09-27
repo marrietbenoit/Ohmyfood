@@ -1,24 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Booki</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css">
-    </head>
-<body>
-    
-    <header>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="/ohmyfood/images/logo/ohmyfood.png" alt="Image of ohmyfood logo. Bold all in one lettering">
     </header>
-    <main>
+
+
+    <main class="container">
+
+        <section class="Reserve">
+
+            <form class="Reserve_Location">
+                <img src="/ohmyfood/images/Icons/location-dot-solid.svg" alt="Image of location dot">
+                <input type="text" id="ville" placeholder="Paris, Belleville">
+            </form>
+
+            <div class="Reserve_reservation">
+                <h1>Résevez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'ecption, sélectionnés par nos soins.</p>
+                <a id="btn" href="#Restaurants">Explorrer nos restaurants</a>
+            </div>
+        </section>
+
+        <section class="Fonctionnement">
+
+            <h2 class="Fonctionnement_title">Fonctionnement</h2>
+
+            <div class="Fonctionnement_btnContainer">
+                <a class="Fonctionnement_btnContainer_btn" href="#">
+                    <div>1</div>
+                    <img src="/ohmyfood/images/Icons/mobile-screen-solid.svg" alt="">Coisissez votre restaurant
+                </a>
+
+                <a class="Fonctionnement_btnContainer_btn" href="#">
+                    <div>2</div>
+                    <img src="/ohmyfood/images/Icons/list-solid.svg" alt="">Composez votre menu
+                </a>
+
+                <a class="Fonctionnement_btnContainer_btn" href="#">
+                    <div>3</div>
+                    <img src="/ohmyfood/images/Icons/store-solid.svg" alt="">Dégustez au restaurant
+                </a>
+            </div>
+        </section>
+
+
+
+        <section class="Restaurants" id="Restaurants">
+
+            <h2>Restaurants</h2>
+
+            <div class="Restaurants_cardContainer">
+
+                <a  class="cardContainer" href="#palette.html">
+                    <article class="cardContainer_card">
+                        <img src="/ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Image de la chambre d'hôtel montrant un lit">
+                        <div class="card-content">
+                            <div class="card-txt">
+                                <h3 class="card-title">La palette du gout</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a  class="cardContainer" href="#">
+                    <article class="cardContainer_card">
+                        <img src="/ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                            alt="Image de la chambre d'hôtel montrant un lit">
+                        <div class="card-content">
+                            <div class="card-txt">
+                                <h3 class="card-title">La palette du gout</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a  class="cardContainer" href="#">
+                    <article class="cardContainer_card">
+                        <img src="/ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                            alt="Image de la chambre d'hôtel montrant un lit">
+                        <div class="card-content">
+                            <div class="card-txt">
+                                <h3 class="card-title">La palette du gout</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <a  class="cardContainer" href="#">
+                    <article class="cardContainer_card">
+                        <img src="/ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            alt="Image de la chambre d'hôtel montrant un lit">
+                        <div class="card-content">
+                            <div class="card-txt">
+                                <h3 class="card-title">La palette du gout</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+               
+            </div>
+
+        </section>
+
 
     </main>
+
+
+    <footer>
+        <img src="/ohmyfood/images/logo/ohmyfood@2x.svg"
+            alt="Image of ohmyfood logo. Bold all in one lettering">
+
+        <ul>
+            <li>
+                <a href="#"><img src="/Imagese-et-textes-Ohmyfood/images/Icons/utensils-solid.svg" alt="">Proposer un
+                    retaurant</a>
+            </li>
+            <li>
+                <a href="#"><img src="/Imagese-et-textes-Ohmyfood/images/Icons/handshake-angle-solid.svg"
+                        alt="">DEvinire Partenaire</a>
+            </li>
+            <li>
+                <a href="#">Mention légales</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </footer>
+
+   
+
 </body>
+
 </html>

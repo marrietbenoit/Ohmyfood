@@ -1,1 +1,176 @@
-/*# sourceMappingURL=style.css.map */
+/***** General *****/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --Primaire-color: #9356dc;
+  --Secondaire-color: #ff79da;
+  --Tertiaire-color: #99e2d0;
+  --bg-color: #f6f6f6;
+  --box-shaddow-color: dimgrey;
+  --Footer-bg-color: #363636;
+  --white-color: white;
+  --text-color: black;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  /***** header *****/
+  /***** Main container *****/
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10dvh;
+}
+body header img {
+  height: 30px;
+}
+body .container {
+  padding-block-end: 0;
+  /***** reserve section *****/
+  /***** fonctionement *****/
+}
+body .container .Reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: 40dvh;
+  text-align: center;
+  background-color: var(--Section-bg-color);
+  /**** reservation ****/
+}
+body .container .Reserve_Location {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  background-color: var(--Section-bg-color);
+}
+body .container .Reserve_Location img {
+  height: 18px;
+}
+body .container .Reserve_Location input {
+  height: 6dvh;
+  background-color: var(--Section-bg-color);
+  border: none;
+}
+body .container .Reserve_reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .Reserve_reservation h1 {
+  width: 60%;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+body .container .Reserve_reservation p {
+  font-size: 20px;
+  font-weight: 100;
+}
+body .container .Reserve_reservation #btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: 400;
+  height: 6dvh;
+  width: 55%;
+  border-radius: 50px;
+  background-image: linear-gradient(var(--Secondaire-color), var(--Primaire-color));
+}
+body .container .Fonctionnement {
+  display: flex;
+  height: 50dvh;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+body .container .Fonctionnement_title {
+  font-weight: 475;
+}
+body .container .Fonctionnement_btnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-color);
+  width: 100%;
+  border-radius: 25px;
+}
+body .container .Fonctionnement_btnContainer_btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-text-size-adjust: auto;
+     -moz-text-size-adjust: auto;
+          text-size-adjust: auto;
+  color: var(--text-color);
+  height: 10dvh;
+  width: 80%;
+  padding: 0 3rem 0 0;
+  text-decoration: none;
+  border-radius: 25px;
+  background-color: var(--bg-color);
+}
+body .container .Fonctionnement_btnContainer img {
+  margin: 1rem;
+  height: 20px;
+}
+body .container .Fonctionnement_btnContainer div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -0.5rem;
+  height: 25px;
+  width: 25px;
+  color: var(--white-color);
+  border-radius: 50%;
+  background-color: var(--Primaire-color);
+}
+body .container .Restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: var(--bg-color);
+}
+body .container .Restaurants_cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+body .container .Restaurants_cardContainer .cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  text-decoration: none;
+}
+body .container .Restaurants_cardContainer .cardContainer_card {
+  height: clamp 40dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  border-radius: 20px;
+}
+body .container .Restaurants_cardContainer .cardContainer_card img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+body .container .Restaurants_cardContainer .cardContainer_card .card-txt {
+  color: var(--text-color);
+  padding: 1rem;
+}/*# sourceMappingURL=style.css.map */
