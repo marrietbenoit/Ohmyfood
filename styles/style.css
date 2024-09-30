@@ -19,6 +19,8 @@ body {
   padding: 0;
   /***** header *****/
   /***** Main container *****/
+  /***** footer ****/
+  /**** media queries desktop ****/
 }
 body header {
   display: flex;
@@ -27,10 +29,10 @@ body header {
   height: 10dvh;
 }
 body header img {
-  height: 30px;
+  height: 40px;
 }
 body .container {
-  padding-block-end: 0;
+  padding: 0;
   /***** reserve section *****/
   /***** fonctionement *****/
 }
@@ -159,7 +161,6 @@ body .container .Restaurants_cardContainer .cardContainer {
   text-decoration: none;
 }
 body .container .Restaurants_cardContainer .cardContainer_card {
-  height: clamp 40dvh;
   display: flex;
   flex-direction: column;
   background-color: var(--white-color);
@@ -173,4 +174,30 @@ body .container .Restaurants_cardContainer .cardContainer_card img {
 body .container .Restaurants_cardContainer .cardContainer_card .card-txt {
   color: var(--text-color);
   padding: 1rem;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--Footer-bg-color);
+  padding: 2rem;
+  gap: 1rem;
+}
+body footer #footerLogo {
+  filter: invert(10);
+  height: 20px;
+}
+body footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body footer a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+body footer a img {
+  margin: 0 0.5rem 0 0;
+  height: 15px;
 }/*# sourceMappingURL=style.css.map */

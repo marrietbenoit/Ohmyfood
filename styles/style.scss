@@ -26,13 +26,13 @@ body {
     align-items: center;
     height: 10dvh;
     img {
-      height: 30px;
+      height: 40px;
     }
   }
   /***** Main container *****/
 
   .container {
-    padding-block-end: 0;
+    padding: 0;
 
     /***** reserve section *****/
     .Reserve {
@@ -156,30 +156,66 @@ body {
         gap: 2rem;
 
         .cardContainer {
-       
           display: flex;
           flex-direction: column;
           align-items: center;
           width: 80%;
           text-decoration: none;
           &_card {
-            height: clamp(350px 40dvh 1000px) ;
             display: flex;
             flex-direction: column;
             background-color: var(--white-color);
-           border-radius: 20px;
+            border-radius: 20px;
             img {
               width: 100%;
               border-top-left-radius: 20px;
               border-top-right-radius: 20px;
             }
-           .card-txt{
-            color: var(--text-color);
-            padding: 1rem;
-           }
+            .card-txt {
+              color: var(--text-color);
+              padding: 1rem;
+            }
           }
         }
       }
     }
   }
+
+  /***** footer ****/
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--Footer-bg-color);
+    padding: 2rem;
+gap: 1rem;
+    #footerLogo {
+      filter: invert(10);
+      height: 20px;
+    }
+    ul {
+      list-style: none;
+      margin:.0;
+      padding: 0;
+    }
+    a {
+ 
+      text-decoration: none;
+      color: var(--white-color);
+      img{
+        margin:0 .5rem 0 0;
+        height: 15px;
+      }
+    }
+  }
+
+
+  /**** media queries desktop ****/
+
+  @media only screen and (min-width: 768px){
+    
+    
+  }
+
 }
