@@ -189,33 +189,51 @@ body {
     align-items: flex-start;
     background-color: var(--Footer-bg-color);
     padding: 2rem;
-gap: 1rem;
+    gap: 1rem;
     #footerLogo {
       filter: invert(10);
       height: 20px;
     }
     ul {
       list-style: none;
-      margin:.0;
+      margin: 0;
       padding: 0;
     }
     a {
- 
       text-decoration: none;
       color: var(--white-color);
-      img{
-        margin:0 .5rem 0 0;
+      img {
+        margin: 0 0.5rem 0 0;
         height: 15px;
       }
     }
   }
+}
+
+/**** media queries desktop ****/
+
+@media only screen and (min-width: 800px) {
 
 
-  /**** media queries desktop ****/
 
-  @media only screen and (min-width: 768px){
-    
-    
+  body{
+    .container{
+      .Fonctionnement_btnContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        color: var(--text-color);
+        border-radius: 25px;
+      }
+      .Restaurants_cardContainer {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        gap: 1rem;
+        background-color: var(--bg-color);}
+    }
   }
 
 }
