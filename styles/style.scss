@@ -7,11 +7,12 @@
   --Primaire-color: #9356dc;
   --Secondaire-color: #ff79da;
   --Tertiaire-color: #99e2d0;
-  --bg-color: #f6f6f6;
   --box-shaddow-color: dimgrey;
   --Footer-bg-color: #363636;
   --white-color: white;
   --text-color: black;
+  --Section-bg-color: #f6f6f6;
+  --location-bg-color: #eaeaea;
 }
 
 body {
@@ -39,24 +40,23 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: auto;
+      width: 100%;
       height: 40dvh;
       text-align: center;
-      background-color: var(--Section-bg-color);
       &_Location {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.7rem;
-        background-color: var(--Section-bg-color);
-
+        background-color: var(--location-bg-color);
+        box-shadow: 1px 1px 4px 1px var(--box-shaddow-color);
         img {
           height: 18px;
         }
         input {
           height: 6dvh;
-          background-color: var(--Section-bg-color);
+          background-color: var(--location-bg-color);
           border: none;
         }
       }
@@ -122,10 +122,10 @@ body {
           padding: 0 3rem 0 0;
           text-decoration: none;
           border-radius: 25px;
-          background-color: var(--bg-color);
+          background-color: var(--Section-bg-color);
         }
         img {
-          margin: 1rem;
+          margin: 1.5rem;
           height: 20px;
         }
 
@@ -145,20 +145,24 @@ body {
     }
     .Restaurants {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       padding: 1rem;
       gap: 1rem;
-      background-color: var(--bg-color);
+      background-color: var(--Section-bg-color);
       &_cardContainer {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 2rem;
-
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
         .cardContainer {
           display: flex;
           flex-direction: column;
-          align-items: center;
           width: 80%;
           text-decoration: none;
           &_card {
@@ -171,9 +175,16 @@ body {
               border-top-left-radius: 20px;
               border-top-right-radius: 20px;
             }
-            .card-txt {
-              color: var(--text-color);
-              padding: 1rem;
+            .card-content {
+              display: flex;
+              align-items: start;
+              .card-txt {
+                padding: 0.5rem;
+                color: var(--text-color);
+                p {
+                  margin-top: 0;
+                }
+              }
             }
           }
         }
@@ -200,6 +211,7 @@ body {
       padding: 0;
     }
     a {
+      font-size: small;
       text-decoration: none;
       color: var(--white-color);
       img {
@@ -212,28 +224,101 @@ body {
 
 /**** media queries desktop ****/
 
-@media only screen and (min-width: 800px) {
-
-
-
-  body{
-    .container{
-      .Fonctionnement_btnContainer{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        color: var(--text-color);
-        border-radius: 25px;
+@media only screen and (min-width: 768px) {
+  body {
+    .container {
+      .Reserve {
+        height: 35dvh;
+        background-color: var(--Section-bg-color);
+        p {
+          font-size: large;
+        }
+        #btn {
+          width: 200px;
+        }
       }
-      .Restaurants_cardContainer {
+      .Fonctionnement {
+        height: 25dvh;
+        &_btnContainer {
+          width: 75%;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          align-self: center;
+          gap: 1rem;
+          color: var(--text-color);
+          border-radius: 25px;
+        }
+      }
+      .Restaurants {
         display: flex;
-        flex-direction: row;
-        padding: 1rem;
-        gap: 1rem;
-        background-color: var(--bg-color);}
+        flex-wrap: wrap;
+        padding: 0 10rem;
+
+        background-color: var(--Section-bg-color);
+        &_cardContainer {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-bottom: 2rem;
+        }
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .cardContainer {
+            display: flex;
+            width: 80%;
+            text-decoration: none;
+            margin: 0 3rem .5rem 0;
+            &_card {
+              display: flex;
+              flex-direction: column;
+              background-color: var(--white-color);
+              border-radius: 20px;
+              .card-content {
+                display: flex;
+                align-items: start;
+                .card-txt {
+                  padding: 1rem;
+                  display: flex;
+                  align-items: start;
+                  flex-direction: column;
+                  color: var(--text-color);
+                  .card-title {
+                    margin: 0;
+                    padding: 0;
+                  }
+                  p {
+                    padding: 0;
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    footer{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      gap: 10rem;
+      padding-right: 5rem;
+      #footerLogo {
+       height: 25px;
+      }
+      ul{
+        display: flex;
+       gap: 2.5rem;
+       #withMargin{
+        margin-right: 5rem;
+       }
+      a{
+        font-size: 30px;
+      }
+      }
     }
   }
-
 }
