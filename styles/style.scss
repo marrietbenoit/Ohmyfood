@@ -181,7 +181,13 @@ body {
               .card-txt {
                 padding: 0.5rem;
                 color: var(--text-color);
+                .card-title{
+                  margin: 0;
+                  padding: 0;
+                }
                 p {
+                  display: flex;
+                  align-self: flex-start;
                   margin-top: 0;
                 }
               }
@@ -229,6 +235,10 @@ body {
     .container {
       .Reserve {
         height: 35dvh;
+        h1{ 
+          width: 100%;
+          font-size: 40px;
+        }
         background-color: var(--Section-bg-color);
         p {
           font-size: large;
@@ -238,9 +248,13 @@ body {
         }
       }
       .Fonctionnement {
+        .Fonctionnement_title{
+         margin-left: 10rem;
+
+        }
         height: 25dvh;
         &_btnContainer {
-          width: 75%;
+          max-width: 80%;
           text-align: center;
           display: flex;
           flex-direction: row;
@@ -304,7 +318,7 @@ body {
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-start;
-      gap: 10rem;
+      gap: 2rem;
       padding-right: 5rem;
       #footerLogo {
        height: 25px;
@@ -313,10 +327,10 @@ body {
         display: flex;
        gap: 2.5rem;
        #withMargin{
-        margin-right: 5rem;
+        margin-right: 2rem;
        }
       a{
-        font-size: 30px;
+        font-size: 16px;
       }
       }
     }

@@ -184,7 +184,13 @@ body .container .Restaurants div .cardContainer_card .card-content .card-txt {
   padding: 0.5rem;
   color: var(--text-color);
 }
+body .container .Restaurants div .cardContainer_card .card-content .card-txt .card-title {
+  margin: 0;
+  padding: 0;
+}
 body .container .Restaurants div .cardContainer_card .card-content .card-txt p {
+  display: flex;
+  align-self: flex-start;
   margin-top: 0;
 }
 body footer {
@@ -221,6 +227,10 @@ body footer a img {
     height: 35dvh;
     background-color: var(--Section-bg-color);
   }
+  body .container .Reserve h1 {
+    width: 100%;
+    font-size: 40px;
+  }
   body .container .Reserve p {
     font-size: large;
   }
@@ -230,8 +240,11 @@ body footer a img {
   body .container .Fonctionnement {
     height: 25dvh;
   }
+  body .container .Fonctionnement .Fonctionnement_title {
+    margin-left: 10rem;
+  }
   body .container .Fonctionnement_btnContainer {
-    width: 75%;
+    max-width: 80%;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -292,7 +305,7 @@ body footer a img {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
-    gap: 10rem;
+    gap: 2rem;
     padding-right: 5rem;
   }
   body footer #footerLogo {
@@ -303,9 +316,9 @@ body footer a img {
     gap: 2.5rem;
   }
   body footer ul #withMargin {
-    margin-right: 5rem;
+    margin-right: 2rem;
   }
   body footer ul a {
-    font-size: 30px;
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
