@@ -5,7 +5,7 @@
 
 :root {
   --Primaire-color: #9356dc;
-  --Secondaire-color: #ff79da;
+  --Secondaire-color: #9356dc;
   --Tertiaire-color: #99e2d0;
   --box-shaddow-color: #0000001a;
   --Footer-bg-color: #363636;
@@ -14,6 +14,7 @@
   --Section-bg-color: #f6f6f6;
   --location-bg-color: #eaeaea;
   --h2-borderColor: #99e2d0;
+  --searchBar-shaddow-color:#cdcdcd;
 }
 
 #landingPage {
@@ -53,7 +54,7 @@
   align-items: center;
   gap: 0.7rem;
   background-color: var(--location-bg-color);
-  box-shadow: 1px 1px 4px 1px var(--box-shaddow-color);
+  box-shadow: 2px 1px 3px 3px var(--searchBar-shaddow-color);
 }
 #landingPage .container .Reserve_Location img {
   height: 18px;
@@ -117,16 +118,22 @@
   -webkit-text-size-adjust: auto;
      -moz-text-size-adjust: auto;
           text-size-adjust: auto;
+  flex-wrap: wrap;
+  gap: 2rem;
   color: var(--text-color);
-  height: 10dvh;
   width: 80%;
-  padding: 0 3rem 0 0;
+  padding: 0 3rem 0 0.5rem;
   text-decoration: none;
   border-radius: 25px;
   background-color: var(--Section-bg-color);
 }
+#landingPage .container .Fonctionnement_btnContainer_btn #topBtn {
+  margin-left: 1rem;
+}
+#landingPage .container .Fonctionnement_btnContainer_btn p {
+  font-size: 14px;
+}
 #landingPage .container .Fonctionnement_btnContainer img {
-  margin: 1.5rem;
   height: 20px;
 }
 #landingPage .container .Fonctionnement_btnContainer div {
@@ -166,6 +173,12 @@
   width: 80%;
   text-decoration: none;
 }
+#landingPage .container .Restaurants div .cardContainer #bigPic {
+  height: 30dvh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 #landingPage .container .Restaurants div .cardContainer_card {
   display: flex;
   flex-direction: column;
@@ -178,12 +191,21 @@
   border-top-right-radius: 20px;
 }
 #landingPage .container .Restaurants div .cardContainer_card .card-content {
-  display: flex;
   align-items: start;
 }
 #landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
   padding: 0.5rem;
   color: var(--text-color);
+}
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt .heart {
+  height: 20px;
+}
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt .heartSolid {
+  height: 20px;
 }
 #landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt .card-title {
   margin: 0;
@@ -192,6 +214,7 @@
 #landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt p {
   display: flex;
   align-self: flex-start;
+  font-weight: 300;
   margin-top: 0;
 }
 #landingPage footer {
@@ -225,7 +248,7 @@
   height: 12px;
 }
 
-#palette {
+#resto {
   margin: auto;
   padding: 0;
   /***** header *****/
@@ -233,7 +256,7 @@
   /**** menu content ***/
   /***** footer ****/
 }
-#palette .palette_header {
+#resto .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -242,60 +265,60 @@
   padding: 1rem 2rem;
   height: 5dvh;
 }
-#palette .palette_header img {
-  height: 30px;
+#resto .header img {
+  height: 40px;
 }
-#palette .palette_header .arrow {
+#resto .header .arrow {
   height: 20px;
 }
-#palette .container {
+#resto .container {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
   /*** order_btn ****/
 }
-#palette .container_hero {
-  height: 20dvh;
+#resto .container_hero {
+  height: 30dvh;
 }
-#palette .container_hero img {
+#resto .container_hero img {
   width: 100%;
-  height: 25dvh;
+  height: 40dvh;
 }
-#palette .container .icon {
+#resto .container .icon {
   height: 30px;
 }
-#palette .container_menu {
+#resto .container_menu {
   padding: 0.5rem;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   background-color: var(--Section-bg-color);
 }
-#palette .container_menu_title {
+#resto .container_menu_title {
   width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 0.4rem;
 }
-#palette .container_menu_title h1 {
+#resto .container_menu_title h1 {
   font-weight: 800;
   font-size: 28px;
   font-style: italic;
 }
-#palette .container_menu_cards {
+#resto .container_menu_cards {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 2rem;
   /*** underline color and size ****/
 }
-#palette .container_menu_cards h2 {
+#resto .container_menu_cards h2 {
   display: inline-block;
   position: relative;
   font-weight: 200;
 }
-#palette .container_menu_cards h2::after {
+#resto .container_menu_cards h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -304,7 +327,7 @@
   height: 3px;
   background-color: var(--h2-borderColor);
 }
-#palette .container_menu_cards .card-txt {
+#resto .container_menu_cards .card-txt {
   display: flex;
   flex-direction: column;
   background-color: var(--white-color);
@@ -312,28 +335,28 @@
   border-radius: 15px;
   box-shadow: 0px 0px 20px 0px var(--box-shaddow-color);
 }
-#palette .container_menu_cards .card-txt h3 {
+#resto .container_menu_cards .card-txt h3 {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
 }
-#palette .container_menu_cards .card-txt div {
+#resto .container_menu_cards .card-txt div {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
 }
-#palette .container_menu_cards .card-txt div p {
+#resto .container_menu_cards .card-txt div p {
   font-size: 15px;
   font-weight: 300;
   margin: 0;
 }
-#palette .container_btn {
+#resto .container_btn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
 }
-#palette .container_btn a {
+#resto .container_btn a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,7 +368,7 @@
   border-radius: 50px;
   background-image: linear-gradient(var(--Secondaire-color), var(--Primaire-color));
 }
-#palette footer {
+#resto footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -355,24 +378,24 @@
   padding: 2rem;
   gap: 1rem;
 }
-#palette footer #footerLogo {
+#resto footer #footerLogo {
   filter: invert(10);
   height: 15px;
 }
-#palette footer ul {
+#resto footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#palette footer ul #withMargin img {
+#resto footer ul #withMargin img {
   height: 10px;
 }
-#palette footer ul a {
+#resto footer ul a {
   font-size: small;
   text-decoration: none;
   color: var(--white-color);
 }
-#palette footer ul a img {
+#resto footer ul a img {
   margin: 0 0.5rem 0 0;
   height: 12px;
 }
