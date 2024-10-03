@@ -7,15 +7,16 @@
   --Primaire-color: #9356dc;
   --Secondaire-color: #ff79da;
   --Tertiaire-color: #99e2d0;
-  --box-shaddow-color: dimgrey;
+  --box-shaddow-color: #0000001a;
   --Footer-bg-color: #363636;
   --white-color: white;
   --text-color: black;
   --Section-bg-color: #f6f6f6;
   --location-bg-color: #eaeaea;
+  --h2-borderColor: #99e2d0;
 }
 
-body {
+#landingPage {
   margin: auto;
   padding: 0;
 
@@ -181,7 +182,7 @@ body {
               .card-txt {
                 padding: 0.5rem;
                 color: var(--text-color);
-                .card-title{
+                .card-title {
                   margin: 0;
                   padding: 0;
                 }
@@ -215,14 +216,181 @@ body {
       list-style: none;
       margin: 0;
       padding: 0;
+      #withMargin {
+        img {
+          height: 10px;
+        }
+      }
+      a {
+        font-size: small;
+        text-decoration: none;
+        color: var(--white-color);
+        img {
+          margin: 0 0.5rem 0 0;
+          height: 12px;
+        }
+      }
     }
-    a {
-      font-size: small;
-      text-decoration: none;
-      color: var(--white-color);
+  }
+}
+
+#palette {
+  margin: auto;
+  padding: 0;
+
+  /***** header *****/
+
+  /*** La palettte du gout ****/
+  .palette_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0;
+    padding: 1rem 2rem;
+    height: 5dvh;
+    img {
+      height: 30px;
+    }
+    .arrow {
+      height: 20px;
+    }
+  }
+
+  /**** menu content ***/
+  .container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    &_hero {
+      height: 20dvh;
       img {
-        margin: 0 0.5rem 0 0;
-        height: 15px;
+        width: 100%;
+        height: 25dvh;
+      }
+    }
+    .icon {
+      height: 30px;
+    }
+    &_menu {
+      padding: 0.5rem;
+
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+      background-color: var(--Section-bg-color);
+      &_title {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.4rem;
+        h1 {
+          font-weight: 800;
+          font-size: 28px;
+          font-style: italic;
+        }
+      }
+      &_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        h2 {
+          display: inline-block;
+          position: relative;
+          font-weight: 200;
+        }
+        /*** underline color and size ****/
+        h2::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 15%;
+          height: 3px;
+          background-color: var(--h2-borderColor);
+        }
+        .card-txt {
+          display: flex;
+          flex-direction: column;
+          background-color: var(--white-color);
+          padding: 0.25rem 1rem;
+          border-radius: 15px;
+          box-shadow: 0px 0px 20px 0px var(--box-shaddow-color);
+
+          h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+          }
+          div {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+
+            p {
+              font-size: 15px;
+              font-weight: 300;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    /*** order_btn ****/
+    &_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: var(--white-color);
+        font-weight: 400;
+        height: 6dvh;
+        width: 40%;
+        border-radius: 50px;
+        background-image: linear-gradient(
+          var(--Secondaire-color),
+          var(--Primaire-color)
+        );
+      }
+    }
+  }
+  /***** footer ****/
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: baseline;
+    align-items: flex-start;
+    background-color: var(--Footer-bg-color);
+    padding: 2rem;
+    gap: 1rem;
+    #footerLogo {
+      filter: invert(10);
+      height: 15px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      #withMargin {
+        img {
+          height: 10px;
+        }
+      }
+      a {
+        font-size: small;
+        text-decoration: none;
+        color: var(--white-color);
+        img {
+          margin: 0 0.5rem 0 0;
+          height: 12px;
+        }
       }
     }
   }
@@ -235,7 +403,7 @@ body {
     .container {
       .Reserve {
         height: 35dvh;
-        h1{ 
+        h1 {
           width: 100%;
           font-size: 40px;
         }
@@ -248,9 +416,8 @@ body {
         }
       }
       .Fonctionnement {
-        .Fonctionnement_title{
-         margin-left: 10rem;
-
+        .Fonctionnement_title {
+          margin-left: 10rem;
         }
         height: 25dvh;
         &_btnContainer {
@@ -284,7 +451,7 @@ body {
             display: flex;
             width: 80%;
             text-decoration: none;
-            margin: 0 3rem .5rem 0;
+            margin: 0 3rem 0.5rem 0;
             &_card {
               display: flex;
               flex-direction: column;
@@ -314,24 +481,24 @@ body {
         }
       }
     }
-    footer{
+    footer {
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-start;
       gap: 2rem;
       padding-right: 5rem;
       #footerLogo {
-       height: 25px;
+        height: 25px;
       }
-      ul{
+      ul {
         display: flex;
-       gap: 2.5rem;
-       #withMargin{
-        margin-right: 2rem;
-       }
-      a{
-        font-size: 16px;
-      }
+        gap: 2.5rem;
+        #withMargin {
+          margin-right: 2rem;
+        }
+        a {
+          font-size: 16px;
+        }
       }
     }
   }
