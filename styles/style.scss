@@ -5,7 +5,7 @@
 
 :root {
   --Primaire-color: #9356dc;
-  --Secondaire-color: #9356dc;
+  --Secondaire-color: #ff79da;
   --Tertiaire-color: #99e2d0;
   --box-shaddow-color: #0000001a;
   --Footer-bg-color: #363636;
@@ -14,7 +14,7 @@
   --Section-bg-color: #f6f6f6;
   --location-bg-color: #eaeaea;
   --h2-borderColor: #99e2d0;
---searchBar-shaddow-color:#cdcdcd;
+  --searchBar-shaddow-color: #cdcdcd;
 }
 
 #landingPage {
@@ -52,7 +52,7 @@
         align-items: center;
         gap: 0.7rem;
         background-color: var(--location-bg-color);
-        box-shadow:2px 1px 3px 3px var(--searchBar-shaddow-color);
+        box-shadow: 2px 1px 3px 3px var(--searchBar-shaddow-color);
         img {
           height: 18px;
         }
@@ -122,19 +122,18 @@
           gap: 2rem;
           color: var(--text-color);
           width: 80%;
-          padding: 0 3rem 0 .5rem;
+          padding: 0 3rem 0 0.5rem;
           text-decoration: none;
           border-radius: 25px;
           background-color: var(--Section-bg-color);
-          #topBtn{
+          #topBtn {
             margin-left: 1rem;
           }
-         p{
-          font-size: 14px;
-         }
+          p {
+            font-size: 14px;
+          }
         }
         img {
-       
           height: 20px;
         }
 
@@ -174,10 +173,10 @@
           flex-direction: column;
           width: 80%;
           text-decoration: none;
-          #bigPic{
-         height: 30dvh;
-         width: 100%;
-          object-fit:cover;
+          #bigPic {
+            height: 30dvh;
+            width: 100%;
+            object-fit: cover;
           }
           &_card {
             display: flex;
@@ -190,19 +189,18 @@
               border-top-right-radius: 20px;
             }
             .card-content {
-     
               align-items: start;
-              .card-txt { 
+              .card-txt {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 width: 90%;
                 padding: 0.5rem;
                 color: var(--text-color);
-                .heart{
+                .heart {
                   height: 20px;
                 }
-                .heartSolid{
+                .heartSolid {
                   height: 20px;
                 }
                 .card-title {
@@ -424,6 +422,18 @@
 @media only screen and (min-width: 768px) {
   body {
     .container {
+      .container_hero {
+        img {
+          object-fit: cover;
+        }
+      }
+      .container_menu {
+        margin: 0 12%;
+        &_cards {
+          width: 70%;
+          margin: auto;
+        }
+      }
       .Reserve {
         height: 35dvh;
         h1 {
