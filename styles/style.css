@@ -14,7 +14,7 @@
   --location-bg-color: #eaeaea;
   --h2-borderColor: #99e2d0;
   --searchBar-shaddow-color: #cdcdcd;
-  --flaoting-text-color:#198766;
+  --flaoting-text-color: #198766;
 }
 
 #landingPage {
@@ -43,8 +43,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 40dvh;
   text-align: center;
+  padding-bottom: 5rem;
   /**** reservation ****/
 }
 #landingPage .container .Reserve_Location {
@@ -78,7 +78,7 @@
   font-size: 20px;
   font-weight: 100;
 }
-#landingPage .container .Reserve_reservation #btn {
+#landingPage .container .Reserve_reservation a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +89,12 @@
   width: 55%;
   border-radius: 50px;
   background-image: linear-gradient(var(--Secondaire-color), var(--Primaire-color));
+  box-shadow: 8px 8px 10px var(--box-shaddow-color);
+  transition: all 300ms;
+}
+#landingPage .container .Reserve_reservation a:hover {
+  filter: brightness(110%);
+  box-shadow: 16px 16px 20px var(--box-shaddow-color);
 }
 #landingPage .container .Fonctionnement {
   padding: 1rem;
@@ -120,6 +126,7 @@
   border-radius: 25px;
   background-color: var(--Section-bg-color);
   margin: 1rem auto;
+  box-shadow: 8px 8px 10px var(--box-shaddow-color);
 }
 #landingPage .container .Fonctionnement_btnContainer_btn #topBtn {
   margin-left: 1rem;
@@ -164,7 +171,8 @@
 #landingPage .container .Restaurants div .cardContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   text-decoration: none;
 }
 #landingPage .container .Restaurants div .cardContainer_card {
@@ -172,6 +180,7 @@
   flex-direction: column;
   background-color: var(--white-color);
   border-radius: 20px;
+  position: relative;
 }
 #landingPage .container .Restaurants div .cardContainer_card .nouveau {
   position: absolute;
@@ -199,24 +208,34 @@
 #landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   color: var(--text-color);
 }
-#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt .heart {
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart {
+  justify-content: center;
+}
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart .heart {
   width: 25px;
   height: 25px;
+  margin-right: 2rem;
 }
-#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt .heartSolid {
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart .heartSolid {
   width: 25px;
   height: 25px;
+  margin-right: 2rem;
 }
-#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt .card-title {
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-text {
+  display: flex;
+  flex-direction: column !important;
+}
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-text .card-title {
   font-size: large;
   margin: 0;
   padding: 0;
 }
-#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt p {
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-text p {
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -262,17 +281,18 @@
 }
 #resto .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 70%;
-  margin: 0;
+  justify-content: center;
+  position: relative;
   padding: 1rem 2rem;
   height: 5dvh;
 }
-#resto .header img {
-  height: 40px;
+#resto .header div {
+  display: flex;
 }
 #resto .header .arrow {
+  position: absolute;
+  left: 1rem;
+  top: 33%;
   height: 20px;
 }
 #resto .container {
@@ -283,11 +303,11 @@
   /*** order_btn ****/
 }
 #resto .container_hero {
-  height: 30dvh;
+  height: 45dvh;
 }
 #resto .container_hero img {
   width: 100%;
-  height: 40dvh;
+  height: 50dvh;
 }
 #resto .container .icon {
   height: 30px;
@@ -299,10 +319,11 @@
   background-color: var(--Section-bg-color);
 }
 #resto .container_menu_title {
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   padding: 0 0.4rem;
 }
 #resto .container_menu_title h1 {
@@ -326,33 +347,66 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 15%;
+  bottom: -0.5rem;
+  width: 8%;
   height: 3px;
   background-color: var(--h2-borderColor);
 }
 #resto .container_menu_cards .card-txt {
   display: flex;
-  flex-direction: column;
   background-color: var(--white-color);
-  padding: 0.25rem 1rem;
   border-radius: 15px;
   box-shadow: 0px 0px 20px 0px var(--box-shaddow-color);
 }
-#resto .container_menu_cards .card-txt h3 {
+#resto .container_menu_cards .card-txt > div {
+  transition: all 250ms;
+  transition-timing-function: ease-in;
+  width: 100%;
+  padding: 0.25rem 1rem;
+}
+#resto .container_menu_cards .card-txt > div h3 {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
 }
-#resto .container_menu_cards .card-txt div {
+#resto .container_menu_cards .card-txt > div .card-content {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
 }
-#resto .container_menu_cards .card-txt div p {
+#resto .container_menu_cards .card-txt > div .card-content p {
   font-size: 15px;
   font-weight: 300;
   margin: 0;
+}
+#resto .container_menu_cards .card-txt .card-animation {
+  width: 0px;
+  background-color: var(--Tertiaire-color);
+  border-radius: 0 15px 15px 0;
+  padding: 0;
+  transition: all 250ms;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+#resto .container_menu_cards .card-txt .card-animation span {
+  display: none;
+}
+#resto .container_menu_cards .card-txt:hover > div {
+  width: 90%;
+}
+#resto .container_menu_cards .card-txt:hover .card-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+#resto .container_menu_cards .card-txt:hover .card-animation span {
+  display: block;
+  position: absolute;
+}
+#resto .container_menu_cards .card-txt:hover .card-animation span .checkmark {
+  height: 30px;
+  width: 30px;
 }
 #resto .container_btn {
   display: flex;
@@ -368,9 +422,15 @@
   color: var(--white-color);
   font-weight: 400;
   height: 6dvh;
-  width: 40%;
+  width: 30%;
   border-radius: 50px;
   background-image: linear-gradient(var(--Secondaire-color), var(--Primaire-color));
+  box-shadow: 8px 8px 10px var(--box-shaddow-color);
+  transition: all 300ms;
+}
+#resto .container_btn a:hover {
+  filter: brightness(110%);
+  box-shadow: 16px 16px 20px var(--box-shaddow-color);
 }
 #resto footer {
   display: flex;
@@ -428,9 +488,6 @@
   body .container .Reserve p {
     font-size: large;
   }
-  body .container .Reserve #btn {
-    width: 200px;
-  }
   body .container .Fonctionnement {
     max-width: 1440px;
     margin: 0 auto;
@@ -456,24 +513,32 @@
   }
   body .container .Restaurants {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 0 10rem;
+    padding: 0 5rem;
     background-color: var(--Section-bg-color);
   }
+  body .container .Restaurants h2 {
+    margin-left: 3rem;
+  }
   body .container .Restaurants_cardContainer {
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 2rem;
+    align-items: center;
+    margin-bottom: 5rem;
   }
   body .container .Restaurants div {
+    width: 90%;
     display: flex !important;
     flex-direction: row !important;
   }
   body .container .Restaurants div .cardContainer {
     position: relative;
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    width: 100%;
     text-decoration: none;
   }
   body .container .Restaurants div .cardContainer_card {
@@ -485,6 +550,7 @@
   body .container .Restaurants div .cardContainer_card .card-content {
     display: flex;
     align-items: start;
+    width: 100%;
   }
   body .container .Restaurants div .cardContainer_card .card-content .card-txt {
     padding: 1rem;
@@ -492,6 +558,14 @@
     align-items: start;
     flex-direction: column;
     color: var(--text-color);
+  }
+  body .container .Restaurants div .cardContainer_card .card-content .card-txt-heart {
+    justify-content: end !important;
+    align-items: center;
+    height: 60px;
+  }
+  body .container .Restaurants div .cardContainer_card .card-content .card-txt-text {
+    gap: 0.5rem !important;
   }
   body .container .Restaurants div .cardContainer_card .card-content .card-txt .card-title {
     margin: 0;
@@ -503,17 +577,17 @@
   }
   body footer {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 2rem;
-    padding-right: 5rem;
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+    padding-right: 5rem !important;
+    gap: 5rem !important;
   }
   body footer #footerLogo {
     height: 25px;
   }
   body footer ul {
     display: flex;
-    gap: 2.5rem;
+    gap: 1rem;
   }
   body footer ul #withMargin {
     margin-right: 2rem;
