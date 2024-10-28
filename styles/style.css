@@ -348,7 +348,7 @@
   position: absolute;
   left: 0;
   bottom: -0.5rem;
-  width: 8%;
+  width: 60px;
   height: 3px;
   background-color: var(--h2-borderColor);
 }
