@@ -24,6 +24,42 @@
   /***** Main container *****/
   /***** footer ****/
 }
+#landingPage .loader-container {
+  position: absolute;
+  z-index: 1;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--Primaire-color), var(--Secondaire-color));
+  animation: scale-out-center 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+#landingPage .loader-container .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid var(--Primaire-color);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: 2s spin linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 #landingPage header {
   display: flex;
   justify-content: center;
@@ -54,7 +90,10 @@
   align-items: center;
   gap: 0.7rem;
   background-color: var(--location-bg-color);
-  box-shadow: 2px 1px 3px 3px var(--searchBar-shaddow-color);
+}
+#landingPage .container .Reserve_Location:hover {
+  transition: all 300ms;
+  box-shadow: 10px 10px 10px var(--box-shaddow-color);
 }
 #landingPage .container .Reserve_Location img {
   height: 18px;
@@ -89,10 +128,9 @@
   width: 55%;
   border-radius: 50px;
   background-image: linear-gradient(var(--Secondaire-color), var(--Primaire-color));
-  box-shadow: 8px 8px 10px var(--box-shaddow-color);
-  transition: all 300ms;
 }
 #landingPage .container .Reserve_reservation a:hover {
+  transition: all 300ms;
   filter: brightness(110%);
   box-shadow: 16px 16px 20px var(--box-shaddow-color);
 }
@@ -126,7 +164,11 @@
   border-radius: 25px;
   background-color: var(--Section-bg-color);
   margin: 1rem auto;
-  box-shadow: 8px 8px 10px var(--box-shaddow-color);
+}
+#landingPage .container .Fonctionnement_btnContainer_btn:hover {
+  transition: all 300ms;
+  filter: brightness(97%);
+  box-shadow: 16px 16px 20px var(--box-shaddow-color);
 }
 #landingPage .container .Fonctionnement_btnContainer_btn #topBtn {
   margin-left: 1rem;
@@ -182,6 +224,10 @@
   border-radius: 20px;
   position: relative;
 }
+#landingPage .container .Restaurants div .cardContainer_card:hover {
+  transition: all 300ms;
+  box-shadow: 16px 16px 20px var(--box-shaddow-color);
+}
 #landingPage .container .Restaurants div .cardContainer_card .nouveau {
   position: absolute;
   display: flex;
@@ -194,7 +240,7 @@
   right: 2rem;
   color: var(--flaoting-text-color);
 }
-#landingPage .container .Restaurants div .cardContainer_card img {
+#landingPage .container .Restaurants div .cardContainer_card .foodPic {
   width: 100%;
   height: 25dvh;
   -o-object-fit: cover;
@@ -214,17 +260,35 @@
   color: var(--text-color);
 }
 #landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart {
+  display: flex;
   justify-content: center;
-}
-#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart .heart {
+  align-items: center;
+  position: relative;
   width: 25px;
   height: 25px;
-  margin-right: 2rem;
+  top: 0.5rem;
+  margin-right: 1rem;
 }
-#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart .heartSolid {
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart:hover .card-txt-heart-regular {
+  opacity: 0;
+  transition: all 1s;
+}
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart-regular {
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  display: flex;
   width: 25px;
   height: 25px;
-  margin-right: 2rem;
+  background-color: var(--white-color);
+  transition: all 1s;
+}
+#landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart-solid {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  width: 25px;
+  height: 25px;
 }
 #landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-text {
   display: flex;
@@ -272,7 +336,7 @@
 }
 
 #resto {
-  margin: auto;
+  margin: 0;
   padding: 0;
   /***** header *****/
   /*** La palettte du gout ****/
@@ -309,9 +373,6 @@
   width: 100%;
   height: 50dvh;
 }
-#resto .container .icon {
-  height: 30px;
-}
 #resto .container_menu {
   padding: 0.5rem;
   border-top-right-radius: 50px;
@@ -330,6 +391,36 @@
   font-weight: 800;
   font-size: 28px;
   font-style: italic;
+}
+#resto .container_menu_title .menu-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin-right: 1rem;
+}
+#resto .container_menu_title .menu-heart:hover .menu-heart-regular {
+  opacity: 0;
+  transition: all 1s;
+}
+#resto .container_menu_title .menu-heart-regular {
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  background-color: var(--Section-bg-color);
+  transition: all 1s;
+}
+#resto .container_menu_title .menu-heart-solid {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  width: 25px;
+  height: 25px;
 }
 #resto .container_menu_cards {
   display: flex;
@@ -436,7 +527,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-self: baseline;
   align-items: flex-start;
   background-color: var(--Footer-bg-color);
   padding: 2rem;

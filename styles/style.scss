@@ -20,6 +20,48 @@
 #landingPage {
   margin: auto;
   padding: 0;
+  .loader-container {
+    position: absolute;
+  z-index: 1;
+     width: 100dvw;
+     height: 100dvh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background:linear-gradient(var(--Primaire-color),var(--Secondaire-color));
+     animation:scale-out-center 2s cubic-bezier(.55,.085,.68,.53)both;
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid var(--Primaire-color);
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      animation: 2s spin linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+ @keyframes scale-out-center {
+ 0% {
+ // transform: scale(1);
+ opacity: 1;
+          
+ }
+ 100% {
+   // transform: scale(0);
+          
+   opacity: 0;
+   z-index: -1;
+ }
+ }
+  }
 
   /***** header *****/
 
@@ -52,7 +94,11 @@
         align-items: center;
         gap: 0.7rem;
         background-color: var(--location-bg-color);
-        box-shadow: 2px 1px 3px 3px var(--searchBar-shaddow-color);
+       &:hover{
+        transition: all 300ms;
+       
+        box-shadow: 10px 10px 10px var(--box-shaddow-color);
+       }
         img {
           height: 18px;
         }
@@ -90,11 +136,10 @@
             var(--Secondaire-color),
             var(--Primaire-color)
           );
-          box-shadow: 8px 8px 10px var(--box-shaddow-color);
-          transition: all 300ms;
 
           &:hover {
-            //font-size: 50px;
+           
+            transition: all 300ms;
             filter: brightness(110%);
             box-shadow: 16px 16px 20px var(--box-shaddow-color);
           }
@@ -129,7 +174,12 @@
           border-radius: 25px;
           background-color: var(--Section-bg-color);
           margin: 1rem auto;
-          box-shadow: 8px 8px 10px var(--box-shaddow-color);
+          &:hover {
+            transition: all 300ms;
+            filter: brightness(97%);
+            box-shadow: 16px 16px 20px var(--box-shaddow-color);
+          }
+
           #topBtn {
             margin-left: 1rem;
           }
@@ -184,6 +234,11 @@
             background-color: var(--white-color);
             border-radius: 20px;
             position: relative;
+          
+         &:hover{
+          transition: all 300ms;
+          box-shadow: 16px 16px 20px var(--box-shaddow-color);
+         }
             .nouveau {
               position: absolute;
               display: flex;
@@ -196,7 +251,7 @@
               right: 2rem;
               color: var(--flaoting-text-color);
             }
-            img {
+            .foodPic {
               width: 100%;
               height: 25dvh;
               object-fit: cover;
@@ -212,19 +267,45 @@
                 width: 100%;
                 padding: 0.5rem 1rem;
                 color: var(--text-color);
+
                 &-heart {
+                  display: flex;
                   justify-content: center;
-                  .heart {
-                    width: 25px;
-                    height: 25px;
-                    margin-right: 2rem;
+                  align-items: center;
+                  position: relative;
+                  width: 25px;
+                  height: 25px;
+                  top: 0.5rem;
+                  margin-right: 1rem;
+                  &:hover{
+                   // background-color: red;
+                    .card-txt-heart-regular{
+                      opacity: 0;
+                      transition: all 1s;
+                    }
+                  
                   }
-                  .heartSolid {
+                  &-regular {
+                    opacity: 1;
+                    position: absolute;
+                    z-index: 1;
+                    display: flex;
                     width: 25px;
                     height: 25px;
-                    margin-right: 2rem;
+                    background-color: var(--white-color);
+                    transition: all 1s;
+                    
+                  }
+                  &-solid{
+                    position: absolute;
+                    z-index: 0;
+                    display: flex;
+                    width: 25px;
+                    height: 25px;
+               
                   }
                 }
+
                 &-text {
                   display: flex;
                   flex-direction: column !important;
@@ -283,7 +364,7 @@
 }
 
 #resto {
-  margin: auto;
+  margin: 0;
   padding: 0;
   //width: 100%;
 
@@ -320,14 +401,13 @@
         height: 50dvh;
       }
     }
-    .icon {
-      height: 30px;
-    }
+
     &_menu {
       padding: 0.5rem;
       border-top-right-radius: 50px;
       border-top-left-radius: 50px;
       background-color: var(--Section-bg-color);
+    
       &_title {
         width: 100%;
         display: flex;
@@ -341,12 +421,52 @@
           font-size: 28px;
           font-style: italic;
         }
+        .menu-heart{
+         
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 25px;
+            height: 25px;
+          
+            margin-right: 1rem;
+            &:hover{
+            
+              .menu-heart-regular{
+                opacity: 0;
+                transition: all 1s;
+              }
+            
+            }
+            &-regular {
+              opacity: 1;
+              position: absolute;
+              z-index: 1;
+              display: flex;
+              width: 25px;
+              height: 25px;
+              background-color: var(--Section-bg-color);
+              transition: all 1s;
+              
+            }
+            &-solid{
+              position: absolute;
+              z-index: 0;
+              display: flex;
+              width: 25px;
+              height: 25px;
+         
+            }
+         
+        }
       }
       &_cards {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
         margin-bottom: 2rem;
+      
         h2 {
           display: inline-block;
           position: relative;
@@ -461,7 +581,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    justify-self: baseline;
     align-items: flex-start;
     background-color: var(--Footer-bg-color);
     padding: 2rem;
@@ -592,7 +711,7 @@
                     height: 60px;
                   }
                   &-text {
-                    gap: .5rem !important;
+                    gap: 0.5rem !important;
                   }
                   .card-title {
                     margin: 0;
