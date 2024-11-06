@@ -267,7 +267,7 @@
   width: 25px;
   height: 25px;
   top: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 #landingPage .container .Restaurants div .cardContainer_card .card-content .card-txt-heart:hover .card-txt-heart-regular {
   opacity: 0;
@@ -427,7 +427,22 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 2rem;
+  animation: ripple-loader 1s ease-in;
   /*** underline color and size ****/
+}
+@keyframes ripple-loader {
+  0% {
+    left: 100dvw; /* Set initial position from left */
+    width: 25dvw; /* Set initial width */
+    height: 15%; /* Set initial height */
+    opacity: 0; /* Set initial opacity */
+  }
+  100% {
+    left: 0;
+    width: 53%;
+    height: 100%;
+    opacity: 1;
+  }
 }
 #resto .container_menu_cards h2 {
   display: inline-block;
@@ -447,7 +462,10 @@
   display: flex;
   background-color: var(--white-color);
   border-radius: 15px;
-  box-shadow: 0px 0px 20px 0px var(--box-shaddow-color);
+}
+#resto .container_menu_cards .card-txt:hover {
+  transition: all 300ms;
+  box-shadow: 16px 16px 20px var(--box-shaddow-color);
 }
 #resto .container_menu_cards .card-txt > div {
   transition: all 250ms;
