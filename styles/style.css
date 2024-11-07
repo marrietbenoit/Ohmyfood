@@ -332,7 +332,11 @@
 }
 #landingPage footer ul a img {
   margin: 0 0.5rem 0 0;
-  height: 12px;
+  height: 13px;
+  border-radius: 15%;
+}
+#landingPage footer ul a:hover {
+  color: var(--Primaire-color);
 }
 
 #resto {
@@ -427,20 +431,14 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 2rem;
-  animation: ripple-loader 1s ease-in;
+  animation: ripple-loader 3s ease-in;
   /*** underline color and size ****/
 }
 @keyframes ripple-loader {
   0% {
-    left: 100dvw; /* Set initial position from left */
-    width: 25dvw; /* Set initial width */
-    height: 15%; /* Set initial height */
     opacity: 0; /* Set initial opacity */
   }
   100% {
-    left: 0;
-    width: 53%;
-    height: 100%;
     opacity: 1;
   }
 }
@@ -517,6 +515,15 @@
   height: 30px;
   width: 30px;
 }
+#resto .container_menu .card1 {
+  animation-delay: 0s;
+}
+#resto .container_menu .card2 {
+  animation-delay: 400ms;
+}
+#resto .container_menu .card3 {
+  animation-delay: 800ms;
+}
 #resto .container_btn {
   display: flex;
   justify-content: center;
@@ -570,6 +577,9 @@
 #resto footer ul a img {
   margin: 0 0.5rem 0 0;
   height: 12px;
+}
+#resto footer ul a:hover {
+  color: var(--Primaire-color);
 }
 
 /**** media queries desktop ****/
