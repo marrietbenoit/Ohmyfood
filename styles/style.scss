@@ -129,7 +129,7 @@
           text-decoration: none;
           color: var(--white-color);
           font-weight: 400;
-          height: 6dvh;
+      
           width: 55%;
           border-radius: 50px;
           background-image: linear-gradient(
@@ -174,11 +174,8 @@
           border-radius: 25px;
           background-color: var(--Section-bg-color);
           margin: 1rem auto;
-          &:hover {
-            transition: all 300ms;
-            filter: brightness(97%);
-            box-shadow: 16px 16px 20px var(--box-shaddow-color);
-          }
+           box-shadow: 16px 16px 20px var(--box-shaddow-color);
+        
 
           #topBtn {
             margin-left: 1rem;
@@ -580,6 +577,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    
       margin-bottom: 2rem;
       a {
         display: flex;
