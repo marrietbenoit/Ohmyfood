@@ -18,6 +18,7 @@
 }
 
 #landingPage {
+  width: 100dvw;
   margin: auto;
   padding: 0;
   /***** header *****/
@@ -164,11 +165,11 @@
   border-radius: 25px;
   background-color: var(--Section-bg-color);
   margin: 1rem auto;
+  box-shadow: 16px 16px 20px var(--box-shaddow-color);
 }
 #landingPage .container .Fonctionnement_btnContainer_btn:hover {
   transition: all 300ms;
   filter: brightness(97%);
-  box-shadow: 16px 16px 20px var(--box-shaddow-color);
 }
 #landingPage .container .Fonctionnement_btnContainer_btn #topBtn {
   margin-left: 1rem;
@@ -538,7 +539,7 @@
   color: var(--white-color);
   font-weight: 400;
   height: 6dvh;
-  width: 30%;
+  width: 45%;
   border-radius: 50px;
   background-image: linear-gradient(var(--Secondaire-color), var(--Primaire-color));
   box-shadow: 8px 8px 10px var(--box-shaddow-color);
